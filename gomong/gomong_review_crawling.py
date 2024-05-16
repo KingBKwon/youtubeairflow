@@ -10,7 +10,7 @@ load_dotenv()
 
 API_KEY = os.environ.get('API_KEY')
 # YouTube Data API 클라이언트 생성
-youtube = build('youtube', 'v3', developerKey=api_key)
+youtube = build('youtube', 'v3', developerKey=API_KEY)
 
 #video_id 가져오는 list
 video_id = {}
@@ -42,7 +42,7 @@ comments = []
 # YouTube API를 사용하여 댓글 가져오기
 for video_id in video_ids:
     try:
-        api_obj = build('youtube', 'v3', developerKey=api_key)
+        api_obj = build('youtube', 'v3', developerKey=API_KEY)
         response = api_obj.commentThreads().list(part='snippet,replies', videoId=video_id, maxResults=100).execute()
         
         while response:
