@@ -9,8 +9,12 @@ from datetime import datetime
 #moviethink channel external id
 moviethink_channel_id = 'UCKBzr20577Xcn0LJoRVES_A'
 
-#google cloud data key
-API_KEY='AIzaSyAGaXs8mTJy3LQCuCd7cuHFnpd7uLyy4w0'
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+API_KEY = os.environ.get('API_KEY')
 
 #youTube Data API 클라이언트 생성
 youtube = build('youtube','v3',developerKey=API_KEY)

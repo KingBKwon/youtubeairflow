@@ -26,8 +26,6 @@ tokenizer.fit_on_texts(word_vocab)
 MAX_LENGTH = 8  # 문장 최대 길이
 stopwords = ['은', '는', '이', '가', '하', '아', '것', '들', '의', '있', '되', '수', '보', '주', '등', '한']  # 불용어 추가
 
-
-    
 model = keras.models.load_model('my_models/')
 model.load_weights('cnn_classifier_kr_weights.h5')
 
@@ -81,7 +79,7 @@ for youtuber in youtubers:
                 if desc not in description_list:
                     description_list.append(desc)
 #결과물 출력
-#print(description_list)K
+#print(description_list)
 
 # DataFrame 생성
 df_description = pd.DataFrame(description_list, columns=['description'])

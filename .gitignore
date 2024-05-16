@@ -3,15 +3,12 @@
 
 /myvenv
 
-
-cnn_classifier_kr_weights.h5
-
-
 Untitled.ipynb
-
 
 my_models.zip
 
 *.xlsx
 
 *.csv
+
+*.env

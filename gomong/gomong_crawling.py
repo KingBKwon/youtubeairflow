@@ -9,8 +9,12 @@ from datetime import datetime
 #고몽 channel external id
 gomong_channel_id = 'UCpcft4FJXgUjnxWoQYsl7Ug'
 
-#google cloud data key
-API_KEY='AIzaSyAGaXs8mTJy3LQCuCd7cuHFnpd7uLyy4w0'
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+API_KEY = os.environ.get('API_KEY')
 
 #youTube Data API 클라이언트 생성
 youtube = build('youtube','v3',developerKey=API_KEY)

@@ -4,13 +4,15 @@ from googleapiclient.errors import HttpError
 import csv
 import re
 from datetime import datetime
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
+
+API_KEY = os.environ.get('API_KEY')
 
 #dreamteller channel external id
 dreamteller_channel_id = 'UCpCiIDf9UrfRqte55FHWlYQ'
-
-#google cloud data key
-API_KEY='AIzaSyAGaXs8mTJy3LQCuCd7cuHFnpd7uLyy4w0'
 
 #youTube Data API 클라이언트 생성
 youtube = build('youtube','v3',developerKey=API_KEY)

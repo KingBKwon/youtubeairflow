@@ -9,8 +9,12 @@ from datetime import datetime
 #김시선 channel external id
 kimsiseon_channel_id = 'UC79hJz6y1EEiIkwfHOuWC4w'
 
-#google cloud data key
-API_KEY='AIzaSyAGaXs8mTJy3LQCuCd7cuHFnpd7uLyy4w0'
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+API_KEY = os.environ.get('API_KEY')
 
 #youTube Data API 클라이언트 생성
 youtube = build('youtube','v3',developerKey=API_KEY)

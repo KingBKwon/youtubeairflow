@@ -4,13 +4,17 @@ from googleapiclient.errors import HttpError
 import csv
 import re
 from datetime import datetime
+from dotenv import load_dotenv
+import os
 
 
 #지무비 channel external id
 gmovie_channel_id = 'UCaHGOzOyeYzLQeKsVkfLEGA'
 
-#google cloud data key
-API_KEY='AIzaSyAGaXs8mTJy3LQCuCd7cuHFnpd7uLyy4w0'
+
+load_dotenv()
+
+API_KEY = os.environ.get('API_KEY')
 
 #youTube Data API 클라이언트 생성
 youtube = build('youtube','v3',developerKey=API_KEY)

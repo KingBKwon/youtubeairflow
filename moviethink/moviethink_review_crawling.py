@@ -4,9 +4,12 @@ from googleapiclient.errors import HttpError
 import openpyxl
 from datetime import datetime
 
-#youtube api key 
-api_key = 'AIzaSyAGaXs8mTJy3LQCuCd7cuHFnpd7uLyy4w0'
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
+
+API_KEY = os.environ.get('API_KEY')
 # YouTube Data API 클라이언트 생성
 youtube = build('youtube', 'v3', developerKey=api_key)
 
