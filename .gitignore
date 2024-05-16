@@ -12,3 +12,5 @@ my_models.zip
 *.csv
 
 *.env
+
+requirements.txt
