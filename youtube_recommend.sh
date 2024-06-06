@@ -37,14 +37,8 @@ echo "moviethink scripts executed successfully"
 python3 ./vod_review_predict.py
 
 #databasecheck.py실행
-#python3 ./databasecheck.py
+python3 ./databaseupdate.py
 
 #실행완료
 echo "success"
 
-# Slack webhook URL과 메시지 설정
-#slack_webhook_url="https://hooks.slack.com/services/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"
-#message="YouTube recommendation script executed successfully"
-
-# curl을 사용하여 Slack에 메시지 전송
-#curl -X POST -H 'Content-type: application/json' --data '{"text":"'"$message"'"}' $slack_webhook_url

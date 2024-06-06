@@ -65,7 +65,7 @@ for youtuber in youtubers:
     # sentiment_ratio가 0.5를 초과하는 video_id를 list로 저장
     video_ids_over_05 = [video_id for video_id, ratio in sentiment_ratio.items() if ratio > 0.5]
 
-    #이제 gmovie_data 가져오기
+    #이제 각각_data 가져오기
     df_videos = pd.read_csv(f'{youtuber}/videos_data_{youtuber}_{current_week}주차.csv')
 
     #description list 안에 저장
