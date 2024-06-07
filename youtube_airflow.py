@@ -21,62 +21,62 @@ with DAG(
 
     t1a = BashOperator(
         task_id='gmoviecrawling',
-        bash_command='python3 ./gmovie/gmovie_crawling.py',
+        bash_command='python3 home/ubuntu/airflow/dags/youtubeairflow/gmovie/gmovie_crawling.py',
     )
         
     t1b = BashOperator(
         task_id='gmoviereviewcrawling',
-        bash_command='python3 ./gmovie/gmovie_review_crawling.py',
+        bash_command='python3 python3 /home/ubuntu/airflow/dags/youtubeairflow/gmovie/gmovie_review_crawling.py',
     )
 
     t2a = BashOperator(
         task_id='dreamtellercrawling',
-        bash_command='python3 ./dreamteller/dreamteller_crawling.py',
+        bash_command='python3 python3 /home/ubuntu/airflow/dags/youtubeairflow/dreamteller/dreamteller_crawling.py',
     )
 
     t2b = BashOperator(
         task_id='dreamtellerreviewcrawling',
-        bash_command='python3 ./dreamteller/dreamteller_review_crawling.py',
+        bash_command='python3 /home/ubuntu/airflow/dags/youtubeairflow/dreamteller/dreamteller_review_crawling.py',
     )
 
     t3a = BashOperator(
         task_id='gomongcrawling',
-        bash_command='python3 ./gomong/gomong_crawling.py',
+        bash_command='python3 /home/ubuntu/airflow/dags/youtubeairflow/gomong/gomong_crawling.py',
     )
 
     t3b = BashOperator(
         task_id='gomongreviewcrawling',
-        bash_command='python3 ./gomong/gomong_review_crawling.py',
+        bash_command='python3 /home/ubuntu/airflow/dags/youtubeairflow/gomong/gomong_review_crawling.py',
     )
 
     t4a = BashOperator(
         task_id='kimsiseoncrawling',
-        bash_command='python3 ./kimsiseon/kimsiseon_crawling.py',
+        bash_command='python3 /home/ubuntu/airflow/dags/youtubeairflow/kimsiseon/kimsiseon_crawling.py',
     )
 
     t4b = BashOperator(
         task_id='kimsiseonreviewcrawling',
-        bash_command='python3 ./kimsiseon/kimsiseon_review_crawling.py',
+        bash_command='python3 /home/ubuntu/airflow/dags/youtubeairflow/kimsiseon/kimsiseon_review_crawling.py',
     )
 
     t5a = BashOperator(
         task_id='moviethinkcrawling',
-        bash_command='python3 ./moviethink/moviethink_crawling.py',
+        bash_command='python3 /home/ubuntu/airflow/dags/youtubeairflow/moviethink/moviethink_crawling.py',
     )
 
     t5b = BashOperator(
         task_id='moviethinkreviewcrawling',
-        bash_command='python3 ./moviethink/moviethink_review_crawling.py',
+        bash_command='python3 /home/ubuntu/airflow/dags/youtubeairflow/moviethink/moviethink_review_crawling.py',
     )
 
     t6 = BashOperator(
         task_id='vod_review_predict',
-        bash_command='python3 ./vod_review_predict.py',
+        bash_command='python3 /home/ubuntu/airflow/dags/youtubeairflow/vod_review_predict.py',
     )
 
     t7 = BashOperator(
         task_id='databaseupdate',
-        bash_command='python3 ./database_update.py',
+        bash_command='python3 /home/ubuntu/airflow/dags/youtubeairflow/database_update.py',
     )
 
     # 태스크 간의 종속성 설정
