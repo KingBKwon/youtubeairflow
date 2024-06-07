@@ -21,17 +21,17 @@ with DAG(
 
     t1a = BashOperator(
         task_id='gmoviecrawling',
-        bash_command='python3 home/ubuntu/airflow/dags/youtubeairflow/gmovie/gmovie_crawling.py',
+        bash_command='python3 /home/ubuntu/airflow/dags/youtubeairflow/gmovie/gmovie_crawling.py',
     )
         
     t1b = BashOperator(
         task_id='gmoviereviewcrawling',
-        bash_command='python3 python3 /home/ubuntu/airflow/dags/youtubeairflow/gmovie/gmovie_review_crawling.py',
+        bash_command='python3 /home/ubuntu/airflow/dags/youtubeairflow/gmovie/gmovie_review_crawling.py',
     )
 
     t2a = BashOperator(
         task_id='dreamtellercrawling',
-        bash_command='python3 python3 /home/ubuntu/airflow/dags/youtubeairflow/dreamteller/dreamteller_crawling.py',
+        bash_command='python3 /home/ubuntu/airflow/dags/youtubeairflow/dreamteller/dreamteller_crawling.py',
     )
 
     t2b = BashOperator(
